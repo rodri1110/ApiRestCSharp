@@ -19,5 +19,11 @@ namespace SalesApiCSharp.Services
         {
             return _context.Seller.ToList();
         }
+
+        public void Inserir(Seller obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
