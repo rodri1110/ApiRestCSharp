@@ -7,23 +7,18 @@ using System.Threading.Tasks;
 
 namespace SalesApiCSharp.Services
 {
-    public class SellerService
+    public class DepartmentService
     {
         private readonly SalesApiCSharpContext _context;
 
-        public SellerService(SalesApiCSharpContext context)
+        public DepartmentService(SalesApiCSharpContext context)
         {
             _context = context;
         }
-        public List<Seller> FindAll()
-        {
-            return _context.Seller.OrderBy(x => x.Name).ToList();
-        }
 
-        public void Inserir(Seller obj)
+        public List<Department> FindAll()
         {
-            _context.Add(obj);
-            _context.SaveChanges();
+            return _context.Department.OrderBy(x => x.Name).ToList();
         }
     }
 }
