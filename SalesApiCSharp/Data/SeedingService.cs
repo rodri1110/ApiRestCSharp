@@ -9,7 +9,7 @@ namespace SalesApiCSharp.Data
 {
     public class SeedingService
     {
-        SalesApiCSharpContext _context;
+        readonly SalesApiCSharpContext _context;
 
         public SeedingService(SalesApiCSharpContext context)
         {
